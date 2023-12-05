@@ -14,7 +14,6 @@ section {
 
 :root {
     --main-color: #0065FC;
-    --secondary-color: #DEEBFF;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
 
@@ -150,15 +149,15 @@ main {
 .filter-item label i {
     padding-right: 1rem;
 }
-.filter-item input[type=checkbox]:checked~label {
+.filter-item input[type=checkbox]:checked ~ label {
     background-color: var(--main-color);
     color: #fff;
 }
-.filter-item input[type=checkbox]:checked~label > i {
+.filter-item input[type=checkbox]:checked ~ label > i {
     color: #fff;
 }
 .filter-item label:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--filter-bg-color);
 }
 
 /* Information */
@@ -229,6 +228,8 @@ section > h2 { width: 100%; }
 .popular-card>div {
     width: 66%;
     padding: 1rem 0.5rem 0.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 .popular-card img {
     width: 30%;
@@ -237,6 +238,7 @@ section > h2 { width: 100%; }
 }
 .popular-card .card-rating {
     padding: 0;
+    margin-top: auto;
 }
 
 /* Cards Common */
@@ -368,7 +370,7 @@ footer div a {
     }
 
     header nav a:hover {
-        border-bottom: #fff solid 2px;
+        border-bottom: var(--main-color) solid 2px;
         border-top: none;
     }
 
@@ -431,7 +433,7 @@ footer div a {
     .activity-card {
         width: 100%;
     }
-    .activity-card>img {
+    .activity-card > img {
         height: 14rem;
     }
 
